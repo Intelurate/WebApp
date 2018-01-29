@@ -15,10 +15,7 @@ class UsersApi {
 
     @Get("/test-api-get")
     TestApiGet(req, res) {     
-        if(req.query.password && req.query.email) {
-            return res.send({ name: "eddie" });            
-        }
-        return res.sendStatus(403);
+        return res.send({ name: "eddie" });                
     }
 
     @Get("/logout")

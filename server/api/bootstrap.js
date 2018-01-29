@@ -126,6 +126,14 @@ class BootstrapApi {
 		stream.pipe(res);
 	}
 
+	@Get('/electron')
+	electronApp(req, res) {
+		var bundle = req.params.bundle;
+		res.setHeader('Content-Type', '');
+		var stream = fs.createReadStream('./html/assets/reactApp.js');
+		stream.pipe(res);
+	}
+
 
 	@Get('/img/store/:file')
 	storeFile(req, res) {
@@ -199,16 +207,20 @@ class BootstrapApi {
 		let jwtAsync = JWTAsync.init('e8vh745v9o875w9v');
 		let decoded;
 
-		decoded = await jwtAsync.verify(req.cookies["UserToken"]);
+		if(req.cookies["UserToken"]) {
+			decoded = await jwtAsync.verify(req.cookies["UserToken"]);
+		}else{
+			return res.send({ redirect: "/login" });
+		}
 
 		if(decoded) {  
 			decoded.ForgeryToken = md5(new Date().getTime() + decoded.userId );
 			var token = await jwtAsync.sign(decoded);     
 			res.cookie("UserToken", token);	
 			let user = await db.collection('users').findOne({ _id: mongojs.ObjectId(decoded.userId) }, { permissions: 1 });		
-			res.send({ ForgeryToken: decoded.ForgeryToken, permissions: user.permissions });
+			return res.send({ ForgeryToken: decoded.ForgeryToken, permissions: user.permissions });
 		}else{
-			res.status(401).send({ message: "UnAuthorized" });
+			return res.status(401).send({ message: "UnAuthorized" });
 		}
 	}
 

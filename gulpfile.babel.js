@@ -63,13 +63,23 @@ gulp.task('transpile-watch', ['transpile'], () => {
     gulp.watch([`${srcPath}/**/*.js`], (data) => {
         let path = `${buildPath}${data.path.split(srcPath)[1]}`;
         let folderpath = [];
-        path = path.split('/');    
+        if(process.platform === 'win32'){
+            path = path.split('\\');    
+        }else{
+            path = path.split('/');            
+        }
         path.forEach((v,i) => {
             if( i < path.length-1 ) {
-                folderpath.push(v+"/");       
+                if(process.platform === 'win32'){
+                    folderpath.push(v+"\\");       
+                }else{
+                    folderpath.push(v+"/");       
+                }
             }
         });
+
         folderpath = folderpath.join('');
+
         gulp.src([data.path])
         .pipe(babel())
         .pipe(gulp.dest(folderpath));

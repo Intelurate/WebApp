@@ -56,6 +56,13 @@ class Header extends Component {
                         </div>
                     </li>
 
+                    <li className="nav-item dropdown">
+                        <a className="nav-link" href="#calendar" role="button"  aria-haspopup="true" aria-expanded="false">
+                            Calendar
+                        </a>
+
+                    </li>                    
+
                 </ul>
                 
                 <ul className="navbar-nav ml-auto">

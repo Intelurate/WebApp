@@ -5,8 +5,9 @@ import App from 'components/app';
 import { HomeIndex, HomeMain } from 'components/home';
 import { ShopMain, ShopUpdatePOMain } from 'components/shop';
 import { PurchaseOrderMain } from 'components/manage_purchase_orders';
+import { CalendarMain } from 'components/calendar';
 
 export default 
     <Route path = "/" component = {App} >
-        { [ HomeIndex, HomeMain, ShopMain, ShopUpdatePOMain, PurchaseOrderMain ] }
+        { [ HomeIndex, HomeMain, ShopMain, ShopUpdatePOMain, PurchaseOrderMain, CalendarMain ] }
     </Route>;

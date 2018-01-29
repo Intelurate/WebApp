@@ -24,7 +24,7 @@ class PurchaseOrderApi {
         res.send({ created: true });
     }
 
-    @Post("/api/purchase_order/add/:po_id?")
+    @Post("/api/purchase_order/add/:po_id?", true)
     async addItemToPO(req, res) {
     
         if(!req.params.po_id) {

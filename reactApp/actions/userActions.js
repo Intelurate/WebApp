@@ -97,8 +97,12 @@ class UserActions {
     static getForgeryTokenAsync() {
         return async (dispatch) => {
             let response = await axios.get(`/api/getForgeryToken`);
-            dispatch(UserActions.updateForgeryToken(response.data.ForgeryToken));
-            dispatch(UserActions.updateUserPermission(response.data.permissions));
+            if(response.data.redirect){
+                window.location = response.data.redirect;
+            }else{
+                dispatch(UserActions.updateForgeryToken(response.data.ForgeryToken));
+                dispatch(UserActions.updateUserPermission(response.data.permissions));
+            }    
         };
     } 
       
