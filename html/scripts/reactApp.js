@@ -70397,7 +70397,7 @@
 	                    _react2.default.createElement(
 	                        'a',
 	                        { className: 'navbar-brand', href: 'index.html' },
-	                        _react2.default.createElement('span', { className: 'icon-uilove-realestate' })
+	                        _react2.default.createElement('img', { src: '/images/southcomm_logo.png' })
 	                    ),
 	                    _react2.default.createElement(
 	                        'button',
@@ -70475,7 +70475,7 @@
 	                                _react2.default.createElement(
 	                                    'a',
 	                                    { className: 'nav-link dropdown-toggle', href: '#', role: 'button', 'data-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' },
-	                                    'Hi, John'
+	                                    'Hi, Eddie'
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
