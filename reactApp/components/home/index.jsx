@@ -63,7 +63,8 @@ class Home extends Component {
 
                 {/* COntent Section */}
 
-                <div id="content" className="pt0 pb0">
+                <div id="content" >
+
                     <div className="feature-box centered">
                         <div data-aos="fade-up">
                             <div className="container">
@@ -72,7 +73,7 @@ class Home extends Component {
                                         <div className="row">
                                             <div className="col-md-4">
                                                 <div className="content-box">
-                                                    <div className="image"> <img src="/img/demo/icons/1.png" width="100" alt="" /> </div>
+                                                    <div className="image"> <img src="/img/demo/icons/chevron.png" width="100" alt="" /> </div>
                                                     <h4>Search</h4>
                                                     <div className="caption">Search from thousands of different products by comparing prices and shipping.</div>
                                                     <div className="button"><a href="#">FIND WHAT YOU NEED</a></div>
@@ -80,7 +81,7 @@ class Home extends Component {
                                             </div>
                                             <div className="col-md-4">
                                                 <div className="content-box">
-                                                    <div className="image"> <img src="/img/demo/icons/2.png" width="100" alt="" /> </div>
+                                                    <div className="image"> <img src="/img/demo/icons/chevron.png" width="100" alt="" /> </div>
                                                     <h4>Add</h4>
                                                     <div className="caption">Add the products that will give you the cheapest cost and quickest shipping available.</div>
                                                     <div className="button"><a href="#">MANAGE PURCHASE ORDERS EASILY</a></div>
@@ -88,8 +89,8 @@ class Home extends Component {
                                             </div>
                                             <div className="col-md-4">
                                                 <div className="content-box">
-                                                    <div className="image"> <img src="/img/demo/icons/3.png" width="100" alt="" /> </div>
-                                                    <h4>Purchase</h4>
+                                                    <div className="image"> <img src="/img/demo/icons/chevron.png" width="100" alt="" /> </div>
+                                                    <h4>Events</h4>
                                                     <div className="caption">By using our easy to use purchasing system there is not need to manage your complicated orders with multiple vendors.</div>
                                                     <div className="button"><a href="#">ONE PURCHASE ORDER, ONE INVOICE</a></div>
                                                 </div>
@@ -100,7 +101,8 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="feature-box centered gray">
+
+                    {/* <div className="feature-box centered gray">
                         <div data-aos="fade-up">
                             <div className="container">
                                 <div className="row justify-content-md-center">
@@ -169,8 +171,9 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="feature-box centered">
+                    </div> */}
+
+                    {/* <div className="feature-box centered">
                         <div data-aos="fade-up">
                             <div className="container">
                                 <div className="row justify-content-md-center">
@@ -212,6 +215,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
+
                     <div className="feature-box gray centered">
                         <div data-aos="fade-up">
                             <div className="container">
@@ -280,6 +284,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
+
                     <div className="feature-box centered pb0">
                         <div data-aos="fade-up">
                             <div className="container">
@@ -298,9 +303,8 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
-
             </div>
         )
     }
@@ -308,6 +312,5 @@ class Home extends Component {
 
 const HomeIndex = <IndexRoute key="index" component={Home} />
 const HomeMain = <Route key="home" path="home" component={Home} />
-
 
 export { HomeIndex, HomeMain };
