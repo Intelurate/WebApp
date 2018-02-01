@@ -124,6 +124,7 @@
     "react-loader": "^2.4.2",
     "react-modal": "^3.1.10",
     "react-notification-system": "^0.2.15",
+    "react-recaptcha": "^2.3.6",
     "react-router-dom": "^4.2.2",
     "react-table": "^6.5.3",
     "redux-thunk": "^2.1.0",

@@ -10209,7 +10209,7 @@
 
 /***/ }),
 /* 344 */
-[1353, 335],
+[1354, 335],
 /* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15836,7 +15836,7 @@
 /* 385 */
 333,
 /* 386 */
-[1353, 370],
+[1354, 370],
 /* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -63207,7 +63207,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	var domain = 'http://localhost:7272';
+	var domain = 'http://mysouthcom.com';
 
 	exports.default = {
 	    /**************************************************************************************************************************************************************** 
@@ -69894,7 +69894,8 @@
 /* 1350 */,
 /* 1351 */,
 /* 1352 */,
-/* 1353 */
+/* 1353 */,
+/* 1354 */
 /***/ (function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**

@@ -34,13 +34,13 @@ class BootstrapApi {
 		stream.pipe(res);
 	}
 
-    // @Get('/assets/global/plugins/font-awesome/css/:file')
-    // fontAwesome(req, res) {
-	// 	var file = req.params.file;
-	// 	res.setHeader('Content-Type', 'text/css');
-	// 	var stream = fs.createReadStream('./html/assets/global/plugins/font-awesome/css/' + file);
-	// 	stream.pipe(res);
-	// }
+    @Get('/assets/global/plugins/font-awesome/css/:file')
+    fontAwesome(req, res) {
+		var file = req.params.file;
+		res.setHeader('Content-Type', 'text/css');
+		var stream = fs.createReadStream('./html/assets/global/plugins/font-awesome/css/' + file);
+		stream.pipe(res);
+	}
 
     @Get('/css/:file')
     cssFile(req, res) {
@@ -50,64 +50,64 @@ class BootstrapApi {
 		stream.pipe(res);
 	}
 
-    // @Get('/assets/global/plugins/bootstrap/css/:file')
-    // bootStrapPlugins(req, res) {
-	// 	var file = req.params.file;
-	// 	res.setHeader('Content-Type', 'text/css');
-	// 	var stream = fs.createReadStream('./html/assets/global/plugins/bootstrap/css/' + file);
-	// 	stream.pipe(res);
-	// }
+    @Get('/assets/global/plugins/bootstrap/css/:file')
+    bootStrapPlugins(req, res) {
+		var file = req.params.file;
+		res.setHeader('Content-Type', 'text/css');
+		var stream = fs.createReadStream('./html/assets/global/plugins/bootstrap/css/' + file);
+		stream.pipe(res);
+	}
 
-    // @Get('/assets/global/plugins/bootstrap-switch/css/:file') 
-    // bootstrapSwitch (req, res) {
-	// 	var file = req.params.file;
-	// 	res.setHeader('Content-Type', 'text/css');
-	// 	var stream = fs.createReadStream('./html/assets/global/plugins/bootstrap-switch/css/' + file);
-	// 	stream.pipe(res);
-    // }
+    @Get('/assets/global/plugins/bootstrap-switch/css/:file') 
+    bootstrapSwitch (req, res) {
+		var file = req.params.file;
+		res.setHeader('Content-Type', 'text/css');
+		var stream = fs.createReadStream('./html/assets/global/plugins/bootstrap-switch/css/' + file);
+		stream.pipe(res);
+    }
     
 
-    // @Get('/assets/pages/css/:file')
-    // cssAssets(req, res) {
-	// 	var file = req.params.file;
-	// 	res.setHeader('Content-Type', 'text/css');
-	// 	var stream = fs.createReadStream('./html/assets/pages/css/' + file);
-	// 	stream.pipe(res);
-	// }
+    @Get('/assets/pages/css/:file')
+    cssAssets(req, res) {
+		var file = req.params.file;
+		res.setHeader('Content-Type', 'text/css');
+		var stream = fs.createReadStream('./html/assets/pages/css/' + file);
+		stream.pipe(res);
+	}
 
-    // @Get('/assets/global/css/:file') 
-    // globalCss (req, res) {
-	// 	var file = req.params.file;
-	// 	res.setHeader('Content-Type', 'text/css');
-	// 	var stream = fs.createReadStream('./html/assets/global/css/' + file);
-	// 	stream.pipe(res);
-	// }
+    @Get('/assets/global/css/:file') 
+    globalCss (req, res) {
+		var file = req.params.file;
+		res.setHeader('Content-Type', 'text/css');
+		var stream = fs.createReadStream('./html/assets/global/css/' + file);
+		stream.pipe(res);
+	}
 
-    // @Get('/assets/layouts/layout/css/:file')
-    // cssLayouts(req, res) {
-	// 	var file = req.params.file;
-	// 	res.setHeader('Content-Type', 'text/css');
-	// 	var stream = fs.createReadStream('./html/assets/layouts/layout/css/' + file);
-	// 	stream.pipe(res);
-	// }
+    @Get('/assets/layouts/layout/css/:file')
+    cssLayouts(req, res) {
+		var file = req.params.file;
+		res.setHeader('Content-Type', 'text/css');
+		var stream = fs.createReadStream('./html/assets/layouts/layout/css/' + file);
+		stream.pipe(res);
+	}
     
 		
 
-	// @Get('/assets/layouts/layout/css/themes/:file')
-	// cssThemes(req, res) {
-	// 	var file = req.params.file;
-	// 	res.setHeader('Content-Type', 'text/css');
-	// 	var stream = fs.createReadStream('./html/assets/layouts/layout/css/themes/' + file);
-	// 	stream.pipe(res);
-	// }
+	@Get('/assets/layouts/layout/css/themes/:file')
+	cssThemes(req, res) {
+		var file = req.params.file;
+		res.setHeader('Content-Type', 'text/css');
+		var stream = fs.createReadStream('./html/assets/layouts/layout/css/themes/' + file);
+		stream.pipe(res);
+	}
 
-	// @Get('/assets/pages/css/:file')
-	// cssPages (req, res) {
-	// 	var file = req.params.file;
-	// 	res.setHeader('Content-Type', 'text/css');
-	// 	var stream = fs.createReadStream('./html/assets/pages/css/' + file);
-	// 	stream.pipe(res);
-	// }
+	@Get('/assets/pages/css/:file')
+	cssPages (req, res) {
+		var file = req.params.file;
+		res.setHeader('Content-Type', 'text/css');
+		var stream = fs.createReadStream('./html/assets/pages/css/' + file);
+		stream.pipe(res);
+	}
 
 	@Get('/css/:path/:file')
 	cssFiles (req, res) {
