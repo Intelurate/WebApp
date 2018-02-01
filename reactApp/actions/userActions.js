@@ -15,7 +15,7 @@ class UserActions {
         return {
             type: Constants.LOAD_USERS,
             users
-        };   
+        };
     }
 
     static loadUserCounter(counter) {
@@ -24,7 +24,7 @@ class UserActions {
             counter
         };
     }
-  
+
     static showDeleteUserModal(bool) {
         return {
             type: Constants.SHOW_DELETE_USER_MODAL,
@@ -58,7 +58,7 @@ class UserActions {
         };
     }
 
-    static selectedUser(property,value) {
+    static selectedUser(property, value) {
         return {
             type: Constants.SELECTED_USER_ROW,
             property,
@@ -66,27 +66,27 @@ class UserActions {
         };
     }
 
-    static updateSelectedRow(property,value) {
+    static updateSelectedRow(property, value) {
         return {
             type: Constants.UPDATE_SELECTED_USER_ROW,
             property,
             value
         }
-    }   
-    
+    }
+
     static updateForgeryToken(forgeryToken) {
         return {
             type: Constants.UPDATE_FORGERY_TOKEN,
             forgeryToken
         }
-    }   
+    }
 
     static updateUserPermission(permissions) {
         return {
             type: Constants.UPDATE_USER_PERMISSIONS,
             permissions
         }
-    }   
+    }
 
     // ===================================================================== //
     // ===================================================================== //
@@ -97,15 +97,19 @@ class UserActions {
     static getForgeryTokenAsync() {
         return async (dispatch) => {
             let response = await axios.get(`/api/getForgeryToken`);
-            if(response.data.redirect){
-                window.location = response.data.redirect;
-            }else{
-                dispatch(UserActions.updateForgeryToken(response.data.ForgeryToken));
-                dispatch(UserActions.updateUserPermission(response.data.permissions));
-            }    
+            try {
+                if (response.data.redirect) {
+                    window.location = response.data.redirect;
+                } else {
+                    dispatch(UserActions.updateForgeryToken(response.data.ForgeryToken));
+                    dispatch(UserActions.updateUserPermission(response.data.permissions));
+                }
+            } catch (error) {
+                console.log('error --->', error)
+            }
         };
-    } 
-      
+    }
+
 }
 
 export default UserActions;

@@ -69470,11 +69470,15 @@
 	                                case 2:
 	                                    response = _context.sent;
 
-	                                    if (response.data.redirect) {
-	                                        window.location = response.data.redirect;
-	                                    } else {
-	                                        dispatch(UserActions.updateForgeryToken(response.data.ForgeryToken));
-	                                        dispatch(UserActions.updateUserPermission(response.data.permissions));
+	                                    try {
+	                                        if (response.data.redirect) {
+	                                            window.location = response.data.redirect;
+	                                        } else {
+	                                            dispatch(UserActions.updateForgeryToken(response.data.ForgeryToken));
+	                                            dispatch(UserActions.updateUserPermission(response.data.permissions));
+	                                        }
+	                                    } catch (error) {
+	                                        console.log('error --->', error);
 	                                    }
 
 	                                case 4:
