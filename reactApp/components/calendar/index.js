@@ -45,6 +45,8 @@ class Calendar extends Component {
 
         let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
 
+        console.log('events --->', this.state.events)
+
         return (
             <div className="container">
 
@@ -78,8 +80,8 @@ class Calendar extends Component {
                     endAccessor='end'
                     defaultView="week"
                     defaultValue={'en'}
-                    timeslots={60}
-                    //views={allViews}
+                    timeslots={30}
+                    views={allViews}
                     step={1}
                     defaultDate={new Date()}
                     onSelectEvent={event => alert(event.title + ' ' + event.start)}
